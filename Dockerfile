@@ -2,7 +2,8 @@ FROM ghcr.io/hauke-cloud/library/zsh-flavor:latest
 
 USER root
 
-RUN apt install \
+RUN apt update \
+  && apt install -y \
   unzip \
   && rm -rf /var/lib/apt/lists/*
 
