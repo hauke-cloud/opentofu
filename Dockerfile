@@ -1,5 +1,11 @@
 FROM ghcr.io/hauke-cloud/library/zsh-flavor:latest
 
+USER root
+
+RUN apt install \
+  unzip \
+  && rm -rf /var/lib/apt/lists/*
+
 USER 1000:1000
 
 RUN git clone --depth=1 https://github.com/tfutils/tfenv.git ~/.tfenv \
