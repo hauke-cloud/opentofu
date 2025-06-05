@@ -37,13 +37,13 @@ start the container:
 #### Pull the Docker Image
 
 ```bash
-docker pull ghcr.io/hauke-cloud/oci-library/opentofu:latest
+docker pull ghcr.io/hauke-cloud/library/opentofu:latest
 ```
 
 #### Run the Docker Container
 
 ```bash
-docker run -d --rm ghcr.io/hauke-cloud/oci-library/opentofu:latest
+docker run -d --rm ghcr.io/hauke-cloud/library/opentofu:latest
 ```
 
 #### Stop the Docker Container
@@ -61,7 +61,7 @@ Therefore, they are referenced by default in a ```.smee``` config.
 #### Configure ```SMEE_IMAGE``` in [Smee](https://github.com/hauke-cloud/smee) config file
 
 ```bash
-SMEE_IMAGE=ghcr.io/hauke-cloud/oci-library/opentofu:latest
+SMEE_IMAGE=ghcr.io/hauke-cloud/library/opentofu:latest
 ```
 
 Usually the entrypoint should be set. So you can leave the ```SMEE_COMMAND``` empty.
