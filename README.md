@@ -64,10 +64,12 @@ Therefore, they are referenced by default in a ```.smee``` config.
 SMEE_IMAGE=ghcr.io/hauke-cloud/library/opentofu:latest
 ```
 
-Usually the entrypoint should be set. So you can leave the ```SMEE_COMMAND``` empty.
-
+The image works best with following settings:
 ```bash
-SMEE_COMMMAND=""
+#SMEE_COMMAND=''
+SMEE_MOUNTS_CUSTOM="$(basename ${PWD})-home:/home/smee/history"
+SMEE_MAP_UID='1000'
+SMEE_MAP_GID='1000'
 ```
 
 For everything else please checkout the doumentation of [Smee](https://github.com/hauke-cloud/smee).
